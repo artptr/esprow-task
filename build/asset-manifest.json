@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/esprow-task/build/static/css/main.9b547832.css",
+    "main.js": "/esprow-task/build/static/js/main.cbe79b31.js",
+    "index.html": "/esprow-task/build/index.html",
+    "main.9b547832.css.map": "/esprow-task/build/static/css/main.9b547832.css.map",
+    "main.cbe79b31.js.map": "/esprow-task/build/static/js/main.cbe79b31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b547832.css",
+    "static/js/main.cbe79b31.js"
+  ]
+}
