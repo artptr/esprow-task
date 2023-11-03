@@ -7,7 +7,7 @@ import React, {
 } from 'react';
 import { buildJson, parseJson } from './files';
 import { Data } from './types';
-import styles from './FileManager.module.css';
+import style from './FileManager.module.css';
 
 interface FileManagerProps {
 	data: Data;
@@ -17,6 +17,7 @@ interface FileManagerProps {
 export function FileManager({ data, onLoad }: FileManagerProps) {
 	const fileInputId = useId();
 	const [href, setHref] = useState('#');
+	const [error, setError] = useState<string | null>(null);
 
 	useEffect(() => {
 		return () => {
@@ -25,10 +26,23 @@ export function FileManager({ data, onLoad }: FileManagerProps) {
 	}, [href]);
 
 	const handleOpenFile: ChangeEventHandler<HTMLInputElement> = async (event) => {
-		const { files } = event.target;
-		if (files) {
-			const json = await files[0].text();
-			onLoad(parseJson(json));
+		setError(null);
+
+		try {
+			const { files } = event.target;
+
+			if (files) {
+				const json = await files[0].text();
+				onLoad(parseJson(json));
+			}
+		} catch (error: unknown) {
+			onLoad([]);
+
+			if (error instanceof Error) {
+				setError(error.message);
+			} else {
+				setError('Unknown error');
+			}
 		}
 	};
 
@@ -39,26 +53,31 @@ export function FileManager({ data, onLoad }: FileManagerProps) {
 	};
 
 	return (
-		<div className={styles.root}>
-			<div>
-				<label htmlFor={fileInputId}>
-					<input
-						id={fileInputId}
-						type="file"
-						onChange={handleOpenFile}
-					/>
-				</label>
+		<div className={style.root}>
+			<div className={style.toolbar}>
+				<div>
+					<label htmlFor={fileInputId}>
+						<input
+							id={fileInputId}
+							type="file"
+							onChange={handleOpenFile}
+						/>
+					</label>
+				</div>
+				<div>
+					<a
+						href={href}
+						onClick={handleDownloadFile}
+						type="application/json"
+						download
+					>
+						Download
+					</a>
+				</div>
 			</div>
-			<div>
-				<a
-					href={href}
-					onClick={handleDownloadFile}
-					type="application/json"
-					download
-				>
-					Download
-				</a>
-			</div>
+			{error && (
+				<div className={style.error}>{error}</div>
+			)}
 		</div>
 	);
 }

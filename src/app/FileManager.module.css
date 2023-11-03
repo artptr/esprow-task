@@ -1,5 +1,15 @@
 .root {
     display: flex;
+    flex-direction: column;
     background-color: #aaa;
     padding: 16px;
+}
+
+.toolbar {
+    display: flex;
+}
+
+.error {
+    margin-top: 8px;
+    color: #f00;
 }

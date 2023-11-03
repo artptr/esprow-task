@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/esprow-task/build/static/css/main.9b547832.css",
-    "main.js": "/esprow-task/build/static/js/main.cbe79b31.js",
+    "main.css": "/esprow-task/build/static/css/main.ab692c6a.css",
+    "main.js": "/esprow-task/build/static/js/main.22aef129.js",
     "index.html": "/esprow-task/build/index.html",
-    "main.9b547832.css.map": "/esprow-task/build/static/css/main.9b547832.css.map",
-    "main.cbe79b31.js.map": "/esprow-task/build/static/js/main.cbe79b31.js.map"
+    "main.ab692c6a.css.map": "/esprow-task/build/static/css/main.ab692c6a.css.map",
+    "main.22aef129.js.map": "/esprow-task/build/static/js/main.22aef129.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b547832.css",
-    "static/js/main.cbe79b31.js"
+    "static/css/main.ab692c6a.css",
+    "static/js/main.22aef129.js"
   ]
 }
