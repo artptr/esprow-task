@@ -1,6 +1,31 @@
-# Getting Started with Create React App
+# Esprow-Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The application allows to load a random JSON file with an array of objects and edit its fields.
+
+Preview version of the application is available here: https://artptr.github.io/esprow-task/build/
+
+There is an example file in the repository: https://raw.githubusercontent.com/artptr/esprow-task/main/generated.json
+
+Also, you can use https://www.json-generator.com/ to build your own JSON file with ease.
+
+## Usage
+
+This application provides a basic interface for managing and editing data.
+It has two main panes: a file manager for loading and downloading JSON files
+and a data editor for modifying the loaded data.
+
+1. **Load Data:**
+- Click the "Choose File" button.
+- Select a JSON file from your local machine.
+- The selected JSON file will be loaded and displayed in the Data Editor pane.
+
+2. **Modify Data:**
+- Edit the data in the text area provided in the Data Editor pane.
+- Any changes you make will be reflected in the data.
+
+3. **Download Data:**
+- Click the "Download" link.
+- This will trigger the download of the currently displayed data in JSON format as a file.
 
 ## Available Scripts
 
@@ -13,34 +38,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
