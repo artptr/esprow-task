@@ -1,0 +1,26 @@
+.field {
+    display: flex;
+    align-items: center;
+    background-color: #aaa;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 8px;
+    margin: 0 10px;
+}
+
+.first {
+    padding-top: var(--card-margin);
+}
+
+.label {
+    width: 20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    height: 100%;
+}

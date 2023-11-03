@@ -1,0 +1,24 @@
+.root {
+    display: flex;
+    height: 100vh;
+    background-color: #555;
+}
+
+.sourcePane,
+.editorPane {
+    padding: 16px;
+}
+
+.sourcePane {
+    width: 30%;
+}
+
+.editorPane {
+    flex-grow: 1;
+}
+
+.sourceArea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
